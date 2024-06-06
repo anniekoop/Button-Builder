@@ -128,7 +128,7 @@ function generateButton() {
 }
 
 function generateButtonHTML(button) {
-    return button.outerHTML.replace(/ style="[^"]*"/g, ''); // Remove inline styles
+    return button.outerHTML.replace(/ style="[^"]*"/g, '');
 }
 
 function generateButtonCSS(button) {
