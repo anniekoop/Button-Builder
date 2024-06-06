@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Tenor+Sans&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="hero">
+        <h1>Build a Button</h1>
+        <p class="description">Use the form below to build and customize a digital button.</p>
+    </div>
+    <main>
+        <form id="input-form">
+            <div class="input-flex">
+                <div class="input-group child">
+                    <label for="fill-color">Fill color</label>
+                    <input id="fill-color" type="color">
+                </div>
+                <div class="input-group child">
+                    <label for="text-color">Text color</label>
+                    <input id="text-color" type="color" value="#FFFFFF">
+                </div>
+            </div>
+            <div class="input-flex">
+                <div class="input-group child">
+                    <label for="shape">Shape</label>
+                    <select id="shape">
+                        <option value="rectangle">Rectangle</option>
+                        <option value="round">Round</option>
+                        <option value="pill">Pill</option>
+                    </select>
+                </div>
+                <div class="input-group child">
+                    <label for="padding">Padding size</label>
+                    <select id="padding">
+                        <option value="none">None</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                        <option value="x-large">XL</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-group solo">
+                <label for="font">Font</label>
+                <select id="font">
+                    <option value="">Select font</option>
+                </select>
+            </div>
+            <div class="input-flex">
+                <div class="input-group child">
+                    <label for="font-size">Font size</label>
+                    <div class="input-container">
+                        <input id="font-size" type="number" step="1" min="8" max="32">
+                    </div>
+                </div>
+                <div class="input-group child">
+                    <label for="font-weight">Font weight</label>
+                    <select id="font-weight">
+                        <option value="">Select weight</option>
+                        <option value="300">300 (Light)</option>
+                        <option value="400">400 (Regular)</option>
+                        <option value="500">500 (Medium)</option>
+                        <option value="600">600 (Semibold)</option>
+                        <option value="700">700 (Bold)</option>
+                        <option value="800">800 (Black)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-flex">
+                <div class="input-group child">
+                    <label for="border-weight">Border weight</label>
+                    <div class="input-container">
+                        <input id="border-weight" type="number" min="0" max="4" step="0.5">
+                    </div>
+                </div>
+                <div class="input-group child">
+                    <label for="border-color">Border color</label>
+                    <input type="color" id="border-color">
+                </div>
+            </div>
+            <div class="input-group solo">
+                <label for="button-label">Button label text</label>
+                <input type="text" id="button-label" maxlength="32" placeholder="What should your button say?">
+            </div>
+            <button type="submit" id="submit-btn">Generate my button</button>
+        </form>
+        <div class="results" id="results">
+            <div id="result-box">
+                <p class="result-text">Your result</p>
+                <div id="result-container"></div>
+                <button id="clear-buttons" style="display: none;">Clear items</button>
+            </div>
+            <div id="codeblock" class="code-block" style="display: none;"></div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

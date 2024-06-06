@@ -1,0 +1,334 @@
+/* Existing CSS */
+body {
+    font-family: 'Space Grotesk';
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 0;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2.5rem;
+}
+
+.hero, main {
+    width: 80vw;
+    margin: auto;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: left;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+}
+
+form {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem 2rem;
+    background: #f5f6f7;
+    border-radius: 1rem;
+    justify-content: left;
+    position: relative;
+    border: 2px solid black;
+    box-shadow: 5.5px 6px 0 black;
+    font-family: 'Space Grotesk';
+
+    .input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.375rem;
+        left: 0;
+
+        label {
+            font-size: 1rem;
+            color: #2a2a2a;
+        }
+
+        input, select {
+            padding: 0.75rem;
+            border: 1.5px solid black;
+            border-radius: 0.375rem;
+            font-family: 'Space Grotesk';
+        }
+    }
+}
+
+.input-flex {
+    display: flex;
+    gap: 1.5rem;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+}
+
+#fill-color {
+    width: 100%;
+    background: white;
+    padding: 1.125rem;
+}
+
+.child {
+    flex: 1;
+    left: 0;
+}
+
+input, select {
+    font-size: 15px;
+    font-family: 'Space Grotesk';
+}
+
+#submit-btn {
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    background: #333;
+    border: 2px solid black;;
+    color: white;
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: ease 0.25s;
+    font-family: 'Space Grotesk';
+}
+
+#submit-btn:hover {
+    background: #ffb900;
+    color: black;
+    box-shadow: 3.5px 4.5px 0 black;
+    border: 2px solid black;
+}
+
+.solo {
+    position: relative;
+    width: 100%;
+    left: 0;
+}
+
+#border-color {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    --webkit-appearance: none;
+    --moz-appearance: none;
+    appearance: none;
+}
+
+#border-color::-webkit-color-swatch {
+    border-radius: 0.25rem;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    border: 1.25px solid #bbb;
+}
+
+#fill-color {
+    width: 100%;
+    padding: 0;
+    height: 2.75rem;
+    --webkit-appearance: none;
+    --moz-appearance: none;
+    appearance: none;
+}
+
+#fill-color::-webkit-color-swatch {
+    border-radius: 0.25rem;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    border: 1.25px solid #bbb;
+}
+
+#text-color {
+    width: 100%;
+    padding: 0;
+    height: 2.75rem;
+    --webkit-appearance: none;
+    --moz-appearance: none;
+    appearance: none;
+    background: white;
+}
+
+#text-color::-webkit-color-swatch {
+    border-radius: 0.25rem;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    border: 1.25px solid #bbb;
+}
+
+.input-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+input[type="number"] {
+    width: 100%;
+}
+
+.unit {
+    position: absolute;
+    top: 50%;
+    left: 2.5rem;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #888;
+    font-size: 15px;
+}
+
+#result-box {
+    width: 100%;
+    height: 240px;
+    background: #f5f6f7;
+    border-radius: 0.75rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: black;
+    padding: 1.25rem;
+    border: 2px solid black;
+    box-shadow: 4px 5px 0 black;
+    position: relative;
+}
+
+.result-text {
+    margin: 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid black;
+    margin-bottom: 2rem;
+}
+
+#result-container {
+    display: flex;
+    gap: 0.75rem;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 1.5px 2px 0 black;
+    transition: ease 0.2s;
+}
+
+select:focus {
+    outline: none;
+    box-shadow: 1.5px 2px 0 black;
+    transition: ease 0.2s;
+}
+
+#clear-buttons {
+    background: transparent;
+    border: none;
+    position: absolute;
+    bottom: 0.75rem;
+    right: 0.625rem;
+    padding: 0.5rem 0.625rem;
+    border-radius: 2rem;
+    font-size: 15px;
+    cursor: pointer;
+    transition: ease 0.2s;
+    display: none; /* Hide by default */
+    font-family: 'Space Grotesk';
+}
+
+#clear-buttons:hover {
+    background: #e4e4e4;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 25vw;
+    display: none;
+}
+
+.code-block {
+    background-color: #2a2a2a;
+    border-radius: 0.75rem;
+    padding: 0.75rem 0.75rem 0.75rem 0.75rem; /* Adjust padding to remove gap */
+    font-family: 'Monaco', Courier, monospace;
+    white-space: pre-wrap; 
+    overflow-x: auto;
+    position: relative;
+    height: fit-content;
+    width: 100%;
+    color: white;
+    font-size: 14px;
+    line-height: 140%;
+}
+
+.banner {
+    background-color: #333;
+    color: white;
+    padding: 0.75rem 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 0.875rem;
+    border-bottom: 2px solid #444;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 0;
+}
+
+#html-code,
+#css-code {
+    margin-top: 0; /* Remove margin-top */
+}
+
+.html {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    font-family: 'SF Mono';
+    font-size: 13px;
+}
+
+.css {
+    margin-top: -3rem;
+    margin-bottom: 0;
+    padding: 0;
+    font-family: 'SF Mono';
+    font-size: 13px;
+}
+
+.hero {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+
+    h1 {
+        text-align: left;
+    }
+}
+
+.html-tab, .css-tab {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #666;
+    color: white;
+    cursor: pointer;
+    padding-left: 0;
+    padding-right: 0.75rem;
+    padding-bottom: 0.125rem;
+    text-align: left;
+}
